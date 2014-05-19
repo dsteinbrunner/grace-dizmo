@@ -126,10 +126,10 @@ class Dizmo:
         if 'dizmo_elements_version' not in self._dizmo_config:
             raise MissingKeyError('Specify a version of the dizmo elements library in the key: "dizmo_elements_version".')
         else:
-            if not isinstance(self._dizmo_config['main_html'], unicode):
+            if not isinstance(self._dizmo_config['dizmo_elements_version'], unicode):
                 raise WrongFormatError('The "dizmo_elements_version" needs to be a string')
             else:
-                if len(self._dizmo_config)
+                if len(self._dizmo_config['dizmo_elements_version']) == 0:
                     raise WrongFormatError('The "dizmo_elements_version" string needs to be at least one character long.')
 
     def _get_plist(self, testname=None, test=False):
